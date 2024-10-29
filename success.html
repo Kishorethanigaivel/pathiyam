@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            height: 100vh; /* Full height of the viewport */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; /* Space between logo and nav links */
+            align-items: center;
+            padding: 20px 100px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure the navbar takes full width */
+            position: relative; /* Relative positioning for any absolute child elements */
+            top: 0; /* Align to the top */
+            z-index: 1000; /* Ensure it stays above other elements */
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #00a600; /* Green color for "Pathiyam" */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doctor-icon {
+            color: #00a600;
+            font-size: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #00a600;
+        }
+
+        /* Message Container */
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: calc(100vh - 100px); /* Remaining height after navbar */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards; /* Animation applied here */
+            text-align: center; /* Center the text inside the container */
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #00a600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="doctor-icon">⨁</span> <!-- Doctor symbol -->
+            Pathiyam
+        </div>
+        <ul class="nav-links">
+            <li><a href="landing.html">Home</a></li> <!-- Only Home link visible -->
+        </ul>
+    </nav>
+
+    <!-- Message Container with Animation -->
+    <div class="message-container">
+        <h1>Message Sent!</h1>
+        <p>Your message has been sent successfully. Our team will reach out to you soon.</p>
+    </div>
+
+</body>
+</html>

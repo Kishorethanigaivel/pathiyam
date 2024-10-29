@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Pathiyam Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 100px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #00a600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doctor-icon {
+            color: #00a600; /* Same color for the doctor symbol */
+            font-size: 30px; /* Adjust size as needed */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ff5d00;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 80px 100px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .menu-header h2 {
+            font-size: 50px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .menu-header p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .menu-item h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .menu-item span {
+            font-weight: bold;
+            color: #ff5d00;
+            font-size: 18px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Nutrition and Quantity */
+        .nutrition-info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .quantity-control button {
+            background-color: #ff5d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .quantity-control button:hover {
+            background-color: #ff7433;
+        }
+
+        .quantity-display {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .action-buttons button {
+            background-color: #ff5d00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            flex: 1; /* Make buttons the same size */
+            margin: 0 5px; /* Add margin for spacing */
+        }
+
+        .action-buttons button:hover {
+            background-color: #ff7433;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="doctor-icon">⨁</span> <!-- Doctor symbol -->
+            Pathiyam
+        </div>
+        <ul class="nav-links">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="menu-header">
+            <h2>Our Menu</h2>
+            <p>Explore our nutritious and delicious offerings crafted to satisfy every taste.</p>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- Sample Menu Items -->
+            <div class="menu-item" data-price="9.99">
+                <img src="page15.jpg" alt=" Vegetable Upma">
+                <h3> Vegetable Upma</h3>
+                <p>Juicy c Vegetable Upma with a spicy twist, topped with fresh veggies.</p>
+                <span>₹<span class="item-price">29.99</span></span>
+                <div class="nutrition-info">Calories: 500 | Protein: 25g | Carbs: 45g | Fat: 22g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Spicy Chicken Burger', 9.99)">Add to Cart</button>
+                    <button onclick="buyNow('Spicy Chicken Burger', 9.99)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-price="12.99">
+                <img src="page16.jpg" alt="Fresh fruit">
+                <h3>Fresh fruit</h3>
+                <p>Classic Italian pizza with mozzarella cheese and fresh basil.</p>
+                <span>₹<span class="item-price">19.99</span></span>
+                <div class="nutrition-info">Calories: 800 | Protein: 20g | Carbs: 100g | Fat: 35g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Margherita Pizza', 12.99)">Add to Cart</button>
+                    <button onclick="buyNow('Margherita Pizza', 12.99)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-price="6.99">
+                <img src="page17.jpg" alt="Small smoothie">
+                <h3>Small smoothie</h3>
+                <p>Fresh veggies wrapped in a soft tortilla with a hint of sauce.</p>
+                <span>₹<span class="item-price">24.99</span></span>
+                <div class="nutrition-info">Calories: 300 | Protein: 10g | Carbs: 40g | Fat: 10g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Veggie Wrap', 6.99)">Add to Cart</button>
+                    <button onclick="buyNow('Veggie Wrap', 6.99)">Buy</button>
+                </div>
+            </div>
+
+            <!-- New Menu Items -->
+            <div class="menu-item" data-price="11.99">
+                <img src="page18.jpg" alt=" Chickpea Salad with Mixed Greens">
+                <h3> Chickpea Salad with Mixed Greens</h3>
+                <p>Fresh seasonal vegetables tossed with pasta and a light sauce.</p>
+                <span>₹<span class="item-price">49.99</span></span>
+                <div class="nutrition-info">Calories: 650 | Protein: 15g | Carbs: 80g | Fat: 20g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Pasta Primavera', 11.99)">Add to Cart</button>
+                    <button onclick="buyNow('Pasta Primavera', 11.99)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-price="8.99">
+                <img src="page19.jpg" alt=" Scrambled Eggs">
+                <h3> Scrambled Eggs</h3>
+                <p>Crisp romaine lettuce, creamy dressing, and crunchy croutons.</p>
+                <span>₹<span class="item-price">19.99</span></span>
+                <div class="nutrition-info">Calories: 350 | Protein: 8g | Carbs: 20g | Fat: 25g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Caesar Salad', 8.99)">Add to Cart</button>
+                    <button onclick="buyNow('Caesar Salad', 8.99)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-price="7.49">
+                <img src="page20.jpg" alt="Whole-Grain Avocado Toas">
+                <h3>Whole-Grain Avocado Toas</h3>
+                <p>Rich and moist chocolate cake topped with creamy frosting.</p>
+                <span>₹<span class="item-price">34.99</span></span>
+                <div class="nutrition-info">Calories: 400 | Protein: 5g | Carbs: 50g | Fat: 18g</div>
+                <div class="quantity-control">
+                    <button onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity-display">1</span>
+                    <button onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="addToCart('Chocolate Cake', 7.49)">Add to Cart</button>
+                    <button onclick="buyNow('Chocolate Cake', 7.49)">Buy</button>
+                </div>
+            </div>
+
+            <!-- Add more menu items as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pathiyam Food Delivery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeQuantity(button, change) {
+            const quantityDisplay = button.parentElement.querySelector('.quantity-display');
+            const priceDisplay = button.closest('.menu-item').querySelector('.item-price');
+            const basePrice = parseFloat(button.closest('.menu-item').getAttribute('data-price'));
+            let quantity = parseInt(quantityDisplay.textContent);
+
+            // Update quantity within limits
+            quantity = Math.max(1, quantity + change);
+            quantityDisplay.textContent = quantity;
+
+            // Update displayed price
+            priceDisplay.textContent = (basePrice * quantity).toFixed(2);
+        }
+
+        function addToCart(itemName, itemPrice) {
+            // Redirect to confirmation page
+            window.location.href = `add-to-cart.html?item=${encodeURIComponent(itemName)}&price=${itemPrice}`;
+        }
+
+        function buyNow(itemName, itemPrice) {
+            // Redirect to buy page
+            window.location.href = `buy.html?item=${encodeURIComponent(itemName)}&price=${itemPrice}`;
+        }
+    </script>
+</body>
+</html>

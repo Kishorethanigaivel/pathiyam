@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pathiyam Food Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+            margin: 0; /* Remove default margin */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px; /* Set a maximum width for the container */
+            margin: 0 auto; /* Center the container */
+            background-color: white; /* Background color for the container */
+            padding: 30px; /* Padding inside the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        }
+        .header {
+            display: flex;
+            justify-content: center; /* Center the header content */
+            align-items: center; /* Center vertically */
+            margin-bottom: 30px; /* Space below header */
+        }
+        .pathiyam-logo {
+            font-size: 24px; /* Font size for Pathiyam name */
+            font-weight: bold; /* Bold text */
+            color: #00a600; /* Green color */
+            margin-left: 10px; /* Space between icon and text */
+        }
+        .doctor-icon {
+            font-size: 24px; /* Font size for the doctor icon */
+            color: #00a600; /* Match the color with the Pathiyam logo */
+        }
+        .qr-code {
+            margin: 20px 0;
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            background-color: #ccc; /* Placeholder for QR code */
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .button {
+            background-color: #ff5d00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #ff7433;
+        }
+        .payment-options {
+            margin-top: 20px;
+            text-align: left; /* Align payment options to the left */
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin: 10px 0; /* Space between payment methods */
+        }
+        .payment-method img {
+            width: 40px; /* Set a fixed width for bank logos */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="doctor-icon">⨁</span> <!-- Doctor symbol -->
+            <div class="pathiyam-logo">Pathiyam</div>
+        </div>
+        
+        <p>Thank you for your purchase!</p>
+<img src="page8.jpg" alt="QR Code" class="qr-code"> <!-- Replace with your QR code image URL -->
+<p>Scan the QR code to complete your payment.</p>
+        <div class="payment-options">
+            <h2>Payment Options</h2>
+            <div class="payment-method">
+                <img src="page9.jpg" alt="Credit Card Logo">
+                <span>Credit Card</span>
+            </div>
+            <div class="payment-method">
+                <img src="page10.jpg" alt="Debit Card Logo">
+                <span>Debit Card</span>
+            </div>
+            <div class="payment-method">
+                <img src="page11.jpg" alt="PayPal Logo">
+                <span>PayPal</span>
+            </div>
+            <div class="payment-method">
+                <img src="page12.jpg" alt="Cash on Delivery Logo">
+                <span>Cash on Delivery</span>
+            </div>
+            <div class="payment-method">
+                <img src="page13.jpg" alt="Bank Transfer Logo">
+                <span>Bank Transfer</span>
+            </div>
+            <div class="payment-method">
+                <img src="page14.jpg" alt="Google Pay Logo">
+                <span>Google Pay</span>
+            </div>
+        </div>
+
+        <button class="button" onclick="window.location.href='menu.html'">Back to Menu</button>
+    </div>
+</body>
+</html>

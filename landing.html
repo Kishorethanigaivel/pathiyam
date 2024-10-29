@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 100px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #00a600; /* Green color for "Pathiyam" */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doctor-icon {
+            color: #00a600;
+            font-size: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #00a600;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 100px;
+            background-color: #fff;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        h2 {
+            font-size: 60px;
+            color: #00a600; /* Green color for hero "Pathiyam" */
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            color: #333;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            color: #ff5d00;
+        }
+
+        .hero-content p {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .cta-btns {
+            margin-top: 30px;
+        }
+
+        .cta-btn {
+            background-color: #ff5d00;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff7433;
+        }
+
+        /* Hero image */
+        .hero-image-container {
+            position: relative;
+            max-width: 50%;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 400px;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+
+        .hero-image-container img.visible {
+            opacity: 1;
+        }
+
+        /* Topics Section */
+        .topics-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 50px 100px;
+            background-color: #f5f5f5; /* Same background as the page */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        /* Combined Topic Container */
+        .topic-container {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+        }
+
+        .topic-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+
+        .topic-content {
+            max-width: 60%;
+        }
+
+        .topic-content h3 {
+            font-size: 36px;
+            color: #00a600;
+            margin-bottom: 10px;
+        }
+
+        .topic-content p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .topic-image {
+            max-width: 30%; /* Adjusted for smaller image */
+            margin-left: 30px;
+            height: auto; /* Responsive height */
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        /* Google Reviews Section */
+        .google-reviews {
+    text-align: center;
+    padding: 20px;
+}
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.review-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.review-card.fade-in {
+    opacity: 1;
+}
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="doctor-icon">⨁</span> <!-- Doctor symbol -->
+            Pathiyam
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"></a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="owner.html">Owners</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="delivery-type"><h2>Pathiyam</h2></span>
+            <h1>The Fastest Delivery in <span>Your City</span></h1>
+            <p>Grocen assures fresh grocery every morning to your family without getting out in this pandemic.</p>
+            <div class="cta-btns">
+                <a href="menu.html" class="cta-btn">Order Now</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="page1.jpg.avif" alt="Fast Delivery Image 1" class="visible">
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics-section">
+        <div class="topic-container">
+            <img src="page22.jpg" alt="Speciality and Customisation Image" class="topic-image">
+            <div class="topic-content">
+                <h3>Speciality and Customisation</h3>
+                <p>At Pathiyam, we believe in the power of personalized food experiences. Every meal can be customized to meet individual dietary needs, from adjusting spices to choosing fresh ingredients. With our unique customization options, you can ensure your meal aligns with your health goals and taste preferences. We also offer specialized dishes tailored for different cultural and regional preferences. Your meal, your way—Pathiyam is committed to serving food that’s uniquely yours.</p>
+            </div>
+        </div>
+
+        <div class="topic-container">
+            <img src="page23.jpg" alt="Calorific and Nutrition Image" class="topic-image">
+            <div class="topic-content">
+                <h3>Calorific and Nutrition Values</h3>
+                <p>At Pathiyam, we prioritize transparency in nutrition, providing detailed caloric and nutrient information for each dish. Our meals are crafted with balanced portions, helping you make mindful choices for your health. Every ingredient is carefully selected to meet daily dietary needs, supporting a well-rounded lifestyle. With Pathiyam, you can easily track calories, proteins, fats, and carbohydrates, making healthy eating straightforward. Enjoy delicious food without compromising on your nutritional goals Pathiyam brings wellness to your table.</p>
+            </div>
+        </div>
+
+        <div class="topic-container">
+            <img src="page33.jpg" alt="Hygiene and Safety Image" class="topic-image">
+            <div class="topic-content">
+                <h3>Hygiene and Safety</h3>
+                <p>We adhere to the highest standards of hygiene and food safety at Pathiyam. Our kitchen follows stringent sanitation protocols, ensuring a clean environment for food preparation. We prioritize your health by using only the freshest ingredients, sourced from trusted suppliers. Each delivery is handled with care, maintaining safety practices from our kitchen to your doorstep. With Pathiyam, you can trust that your food is prepared safely and delivered with the utmost care, giving you peace of mind with every order.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section class="google-reviews">
+        <h2>Testimonials</h2>
+        <div class="reviews-container">
+            <!-- Review cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </section>
+    
+    <script>
+    // Define reviews array
+    const reviews = [
+        { text: "Fast delivery and delicious food!", author: "kishore" },
+        { text: "Pathiyam's customization options are fantastic!", author: "moulee" },
+        { text: "Great service and excellent hygiene standards.", author: "sudharsan " },
+        { text: "Affordable prices and amazing quality!", author: "praveen" },
+        { text: "Pathiyam never disappoints!", author: "danush" }
+    ];
+    
+    // Function to render reviews
+    function renderReviews() {
+        const reviewsContainer = document.querySelector('.reviews-container');
+        reviewsContainer.innerHTML = ''; // Clear existing reviews
+    
+        // Randomly pick 3 reviews from the array
+        const randomReviews = reviews.sort(() => 0.5 - Math.random()).slice(0, 3);
+    
+        // Create and append review cards
+        randomReviews.forEach(review => {
+            const reviewCard = document.createElement('div');
+            reviewCard.classList.add('review-card', 'fade-in');
+            reviewCard.innerHTML = `
+                <p>"${review.text}"</p>
+                <p>- ${review.author}</p>
+            `;
+            reviewsContainer.appendChild(reviewCard);
+        });
+    }
+    
+    // Initial load of reviews
+    renderReviews();
+    
+    // Update reviews every 60 seconds
+    setInterval(renderReviews, 4000);
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pathiyam. All rights reserved.</p>
+        <div class="social-icons">
+            <img src="page29.jpg" alt="Facebook">
+            <img src="page31.jpg" alt="Twitter">
+            <img src="page30.jpg" alt="Instagram">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
